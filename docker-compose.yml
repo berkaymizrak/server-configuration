@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  reverseproxy:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    volumes:
+      - static-data:/srv/public
+    ports:
+      - 1337:80
+    depends_on:
+      - app_usisproweb
+    networks:
+      - network
+
+networks:
+  network:
+    external:
+      name: nginx_network
+
+volumes:
+  postgresql-data:
+  static-data:
