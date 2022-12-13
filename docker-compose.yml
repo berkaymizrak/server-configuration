@@ -8,8 +8,6 @@ services:
       - static-data:/srv/public
     ports:
       - 1337:80
-    depends_on:
-      - app_usisproweb
     networks:
       - network
 
