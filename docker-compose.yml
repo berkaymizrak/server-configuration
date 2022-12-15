@@ -7,7 +7,7 @@ services:
     volumes:
       - static-data:/srv/public
     ports:
-      - 1337:80
+      - 80:80
     networks:
       - network
 
