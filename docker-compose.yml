@@ -4,6 +4,7 @@ services:
     build:
       context: ./nginx
       dockerfile: Dockerfile
+    restart: unless-stopped
     volumes:
       - static-data:/srv/public
     ports:
